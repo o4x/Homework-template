@@ -1,0 +1,20 @@
+
+\section{کد \lr{VHDL} برای \lr{nand}}
+
+\begin{LTR}
+  \begin{lstlisting}[language=vhdl, caption={توصیف \lr{nand}}]
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity nand_entity is
+    port(A: in Bit;      
+         B: in Bit;     
+         Y: out Bit); 
+end nand_entity;
+
+architecture nandGate of nand_entity is
+begin
+    Y <= A nand B;
+end nandGate;\end{lstlisting}
+\end{LTR}
+

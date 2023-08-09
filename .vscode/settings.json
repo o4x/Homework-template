@@ -1,0 +1,25 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=out.nosync",
+                "-aux-directory=out.nosync",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "out.nosync/%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.outDir": "out.nosync",
+}

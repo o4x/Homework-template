@@ -1,0 +1,40 @@
+
+\section{سوال ۲ امتحان قسمت \lr{F6} و \lr{F5}}
+
+پس از محاسبه شکل \lr{SOP} توابع سوال به راحتی حل می‌شود.
+به همین دلیل از رسم \lr{PLA} صرف نظر کردیم.
+
+\subsection{روش جبری}
+
+\begin{align}
+  F5 = A \oplus B \oplus C = (A\bar{B} + \bar{A}B) \oplus C          \\
+  = \overline{(A\bar{B} + \bar{A}B)}C + (A\bar{B} + \bar{A}B)\bar{C} \\
+  \vdots                                                             \\
+  = \bar{A}\bar{B}C + \bar{A}B\bar{C} + A\bar{B}\bar{C} + ABC
+\end{align}
+
+\begin{align}
+  F6 = \overline{(A \oplus B \oplus C)} = A \odot B \odot C = (AB + \bar{A}\bar{B}) \odot C \\
+  = (AB + \bar{A}\bar{B})C + \overline{(AB + \bar{A}\bar{B})}\bar{C}                        \\
+  \vdots                                                                                    \\
+  = \bar{A}\bar{B}\bar{C} + \bar{A}BC + A\bar{B}C + AB\bar{C}
+\end{align}
+
+\subsection{روش تحلیلی}
+
+میدانیم \lr{xor} تابع فرد است پس فقط زمانی خروجی مدار یک میشود که تعداد یک‌های ورودی فرد باشد.
+بنابراین تمام ترکیبات سه ورودی با تعداد فرد یک را مینویسیم.
+
+\begin{align}
+  F5 = \underset{OddFunction}{A \oplus B \oplus C}
+  = \underset{001}{\bar{A}\bar{B}C} + \underset{010}{\bar{A}B\bar{C}} + \underset{100}{A\bar{B}\bar{C}} + \underset{111}{ABC}
+\end{align}
+
+بنا به اصل دوگانگی میدانیم با نات کردن تابع \lr{xor} به تابع \lr{xnor} میرسیم،
+همچنین میدانیم \lr{xnor} تابع زوج است...
+
+\begin{align}
+  F6 = \overline{(A \oplus B \oplus C)}
+  = \underset{EvenFunction}{A \odot B \odot C}
+  = \underset{000}{\bar{A}\bar{B}\bar{C}} + \underset{011}{\bar{A}BC} + \underset{101}{A\bar{B}C} + \underset{110}{AB\bar{C}}
+\end{align}

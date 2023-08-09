@@ -1,0 +1,91 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+% -------------------------------------------------------
+%  Common Styles and Formattings
+% -------------------------------------------------------
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{epsfig,graphicx,subfigure,amsthm,amsmath}
+\usepackage{color,xcolor}   
+\usepackage{float}
+
+\usepackage{listings} % For show codes
+\usepackage{courier}
+\usepackage[most]{tcolorbox}
+
+\usepackage{footmisc}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true,     % Colours links instead of ugly boxes
+  urlcolor     = black,    % Colour for external hyperlinks
+  linkcolor    = black,    % Colour of internal links
+  citecolor    = black,    % Colour of citations
+}
+
+\usepackage{xepersian}
+
+
+% -------------------- Fonts --------------------
+\settextfont[Scale=1, BoldFont=B Nazanin Bold]{B Nazanin}
+\setlatintextfont[Scale=1]{Times New Roman}
+\font\titlefont{B Titr Bold} at 14pt
+\font\poemfont{IranNastaliq} at 12pt
+
+% \settextfont[
+% Scale=1.09,
+% Extension=.ttf, 
+% Path=fonts/,
+% BoldFont=XB NiloofarBd,
+% ItalicFont=XB NiloofarIt,
+% BoldItalicFont=XB NiloofarBdIt
+% ]{XB Niloofar}
+
+% \setdigitfont[
+% Scale=1.09,
+% Extension=.ttf, 
+% Path=fonts/,
+% BoldFont=XB NiloofarBd,
+% ItalicFont=XB NiloofarIt,
+% BoldItalicFont=XB NiloofarBdIt
+% ]{XB Niloofar}
+
+% \defpersianfont\sayeh[
+% Scale=1,
+% Path=fonts/
+% ]{XB Kayhan Pook}
+
+% -------------------- Styles --------------------
+
+\SepMark{-}
+\renewcommand{\labelitemi}{$\small\bullet$}
+
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{halfgray}{gray}{0.5}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\lstset{
+    breaklines=true,
+    captionpos=b,
+    abovecaptionskip=12pt,
+    numbers=left,
+    numberstyle={\footnotesize\tiny\color{halfgray}\lr},
+    tabsize=2,
+    framexleftmargin=6mm,
+    xleftmargin=25pt,
+    xrightmargin=5pt,
+    language=C,
+    aboveskip=20pt,
+    backgroundcolor=\color{light-gray},
+    basicstyle=\color{gray}\footnotesize\ttfamily,
+    keywordstyle=\color{black}\ttfamily,
+    commentstyle=\color{cyan}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    rulecolor=\color{ipython_frame},
+    frame=single,
+    captiondirection=RTL,
+}
+\def\lstlistingname{برنامه}

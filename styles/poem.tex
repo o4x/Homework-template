@@ -1,0 +1,34 @@
+
+\newtcolorbox{tcolorboxTheme}[1][]{%
+    enhanced,
+    breakable,
+    frame hidden,
+    colback=white,
+    overlay unbroken={%
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    overlay first={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay middle={
+            \draw[thick,black,double] (interior.north west)--(interior.south west);
+        },
+    overlay last={
+            \draw[thick,black,double] (interior.north west)--(interior.south west)--(interior.south east);
+        },
+    #1,
+}
+
+\vfill
+\begin{tcolorboxTheme}[breakable, enhanced, grow to left by=-1cm,grow to right by=-1cm]
+  \begin{center}
+    {\poemfont
+      گفتمش نزدیک ما بتخانه و مسجد یکیست
+      \quad
+      گفت عالم مسجدست ای بی بصر بتخانه کو
+    }
+  \end{center}
+  \begin{LTR}
+    خواجوی کرمانی
+  \end{LTR}
+\end{tcolorboxTheme}
